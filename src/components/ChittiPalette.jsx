@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { CHITTI_OPEN } from "@/lib/chitti";
+import { CHITTI_OPEN, getModKey } from "@/lib/chitti";
 
 const hints = [
   { label: "shop", target: "#angadi", hover: "hover:text-hue-red" },
@@ -9,13 +9,6 @@ const hints = [
   { label: "rent", target: "#travel", hover: "hover:text-hue-indigo" },
   { label: "work", target: "#workforce", hover: "hover:text-hue-green" },
 ];
-
-function isMac() {
-  return (
-    typeof navigator !== "undefined" &&
-    /Mac|iPhone|iPad|iPod/.test(navigator.platform)
-  );
-}
 
 export default function ChittiPalette() {
   const [open, setOpen] = useState(false);
@@ -27,7 +20,7 @@ export default function ChittiPalette() {
   const openRef = useRef(false);
   const titleId = useId();
   const reduce = useReducedMotion();
-  const modKey = isMac() ? "⌘" : "Ctrl";
+  const modKey = getModKey();
 
   function close() {
     openRef.current = false;

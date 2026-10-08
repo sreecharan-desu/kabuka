@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ChittiTrigger from "@/components/ChittiTrigger";
 import Mark from "@/components/Mark";
 import Container from "@/components/Container";
 import { brand, hueToken, nav } from "@/data/site";
@@ -23,7 +24,7 @@ export default function Header() {
           : "border-b border-transparent bg-transparent",
       )}
     >
-      <Container className="flex h-16 items-center justify-between gap-6">
+      <Container className="flex h-16 items-center justify-between gap-4">
         <a href="#top" className="flex items-center gap-2.5 no-underline">
           <Mark size={28} className="shrink-0" />
           <span className="text-[1.1rem] font-semibold tracking-tight text-ink">
@@ -44,19 +45,22 @@ export default function Header() {
           ))}
         </nav>
 
-        <a
-          href={brand.liveUrl}
-          target="_blank"
-          rel="noreferrer"
-          className={cn(
-            "text-[0.875rem] font-medium transition-colors",
-            solid
-              ? "rounded-full bg-ink px-4 py-2 text-white hover:opacity-90"
-              : "text-ink underline-offset-4 hover:underline",
-          )}
-        >
-          Open Kabuka
-        </a>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <ChittiTrigger />
+          <a
+            href={brand.liveUrl}
+            target="_blank"
+            rel="noreferrer"
+            className={cn(
+              "text-[0.875rem] font-medium transition-colors",
+              solid
+                ? "rounded-full bg-ink px-4 py-2 text-white hover:opacity-90"
+                : "hidden text-ink underline-offset-4 hover:underline sm:inline",
+            )}
+          >
+            Open Kabuka
+          </a>
+        </div>
       </Container>
     </header>
   );

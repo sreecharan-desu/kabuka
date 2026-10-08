@@ -1,10 +1,16 @@
+import { useSyncExternalStore } from "react";
 import Container from "@/components/Container";
 import HeroSequence from "@/components/HeroSequence";
 import Mark from "@/components/Mark";
 import { brand } from "@/data/site";
-import { openChitti } from "@/lib/chitti";
+import { getModKey, openChitti } from "@/lib/chitti";
+
+function subscribe() {
+  return () => {};
+}
 
 export default function Hero() {
+  const modKey = useSyncExternalStore(subscribe, getModKey, () => "⌘");
 
   return (
     <section
@@ -35,7 +41,7 @@ export default function Hero() {
             Local commerce, everyday services, and care — on one platform.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+          <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
             <a
               href={brand.liveUrl}
               target="_blank"
@@ -47,9 +53,13 @@ export default function Hero() {
             <button
               type="button"
               onClick={openChitti}
-              className="spectrum-underline pb-0.5 text-[0.875rem] font-medium text-ink-soft hover:text-ink"
+              aria-haspopup="dialog"
+              className="inline-flex items-center gap-2.5 text-[0.875rem] font-medium text-ink-soft transition-colors hover:text-ink"
             >
-              Ask Chitti
+              <span className="spectrum-underline pb-0.5">Ask Chitti</span>
+              <kbd className="inline-flex h-6 items-center rounded-md border border-edge bg-card/80 px-1.5 font-mono text-[0.6875rem] text-ink/65">
+                {modKey}K
+              </kbd>
             </button>
           </div>
         </div>

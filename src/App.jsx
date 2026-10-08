@@ -1,5 +1,4 @@
 import Categories from "@/components/Categories";
-import ChittiBar from "@/components/ChittiBar";
 import ChittiPalette from "@/components/ChittiPalette";
 import Closer from "@/components/Closer";
 import Footer from "@/components/Footer";
@@ -17,7 +16,6 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <ChittiBar />
         <Products />
         <Categories />
         <Grow />
