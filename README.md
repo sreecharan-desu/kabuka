@@ -2,7 +2,7 @@
 
 Marketing landing for **Kabuka** — local commerce, everyday services, and care on one platform (Angadi, Adda, Abhaya).
 
-Live: [kabuka.vercel.app](https://kabuka.vercel.app/) · Product: [kabuka.in](https://www.kabuka.in/)
+Live: [kabuka-six.vercel.app](https://kabuka-six.vercel.app/) · Product: [kabuka.in](https://www.kabuka.in/)
 
 ## Stack
 

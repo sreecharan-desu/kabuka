@@ -1,7 +1,7 @@
 export const brand = {
   name: "kabuka",
   tagline: "Everything for everyone",
-  siteUrl: "https://kabuka.vercel.app/",
+  siteUrl: "https://kabuka-six.vercel.app/",
   liveUrl: "https://www.kabuka.in/",
   copyright: "© 2026 Manusmriti. All rights reserved.",
 };

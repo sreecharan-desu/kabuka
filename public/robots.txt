@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kabuka.vercel.app/sitemap.xml
+Sitemap: https://kabuka-six.vercel.app/sitemap.xml
