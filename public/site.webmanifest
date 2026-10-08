@@ -1,0 +1,24 @@
+{
+  "name": "Kabuka",
+  "short_name": "Kabuka",
+  "description": "Local commerce, everyday services, and care on one platform.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f6f4",
+  "theme_color": "#f6f6f4",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

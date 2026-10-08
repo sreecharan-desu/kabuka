@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kabuka.vercel.app/sitemap.xml
